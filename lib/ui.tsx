@@ -26,7 +26,7 @@ export function FadeIn({ children, delay = 0, className = "" }: { children: Reac
   return <div className={"fade-in " + className} style={style}>{children}</div>;
 }
 
-export function Marquee({ items, className = "" }: { items: string[] }) {
+export function Marquee({ items, className = "" }: { items: string[]; className?: string }) {
   const line = useMemo(() => items.join("   ·   ") + "   ·   ", [items]);
   return (
     <div className={"overflow-hidden whitespace-nowrap " + className} aria-label="Live activity">
